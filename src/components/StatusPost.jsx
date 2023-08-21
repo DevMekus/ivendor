@@ -1,36 +1,19 @@
 import React from 'react'
-// import StatusModal from './StatusModal'
-
+import StatusModal from "./StatusModal";
 
 const StatusPost = () => {
-  function showPostModal(){    
-      let pageOverlay = document.querySelector(".pageOverlay")
-      let display = `
-          <div className='modalOverlay'>
-              <div className='statusModal'>
-                  <div class="header">                       
-                      <div class="titleClose">
-                          <h4 class="bold">Create post</h4>
-                          <div class="close"><span class="material-symbols-outlined icon">
-                          close
-                          </span></div>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      `;
 
-      pageOverlay.innerHTML = display;
-      pageOverlay.classList.add("displayPageOverlay")
-  }
+    function displayModal(){
+        <StatusModal />
+    }
 
   return (
-    <div class="statusPostCon">
-           <div class="flexContainer brandArea postArea">
-                <div class="brandLogo">
+    <div className="statusPostCon">
+           <div className="flexContainer brandArea postArea">
+                <div className="brandLogo">
                     <img src="https://w7.pngwing.com/pngs/361/627/png-transparent-leaf-logo-green-leaves-green-and-teal-leaf-logo-text-maple-leaf-grass.png" />
                 </div>
-                <div className='statusBox' onClick={showPostModal}>
+                <div className='statusBox' onClick={displayModal}>
                       Hi DevMekus, Say something to your customers. 
                 </div>
             </div>  
