@@ -1,0 +1,94 @@
+.fixedTopNavigation{
+    width: 100%;
+    position: sticky;
+    top: 0px;
+    left: 0px;   
+    background-color: white;
+    box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.1);
+    z-index: 3;
+}
+
+
+.navbarContainer{
+    width: 100%;
+    padding: 10px 20px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbarContainer .navSide{
+    flex: 1;
+    display:flex;
+    gap: 15px;
+    
+}
+
+.pushEnd{
+    justify-content: flex-end;
+}
+
+.navIcon{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+
+    &:hover{
+        cursor: pointer;   
+        color: var(--primaryColor);
+    }
+
+    a {
+        text-decoration: none;
+    }
+}
+
+.searchBox{
+    width: 400px;
+    height: 300px;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.1);
+    top: 60px;
+    left: 0px;
+    border: 1px solid $primaryColor;
+    padding: 10px;
+    visibility: hidden;
+    opacity: .8;
+    transition: all .38s ease-in-out;
+
+    .header{
+        width: 100%;
+        position: relative;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .header .fa:hover{
+        cursor: pointer;
+    }
+
+    .form{
+        margin-top: 10px;
+    }
+
+    .searchInput{
+        width: 100%;
+        padding: 5px;
+        border-radius: 10px;
+        outline: none;
+        border: 1px solid $primaryColor;
+    }
+
+    .searchResult{
+        margin-top: 20px;
+    }
+}
+
+.showSearchBox{
+    visibility: visible;
+    opacity: 1;
+}
+

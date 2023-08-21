@@ -1,0 +1,162 @@
+.statusPostCon{
+    border-radius: 10px;
+    position: relative;
+    padding: 20px;
+    width: 100%;
+    position: relative;
+}
+
+.postArea{
+    align-items: center;  
+
+    .statusBox{
+        background-color: $pageWrapper;
+        padding: 20px;
+        border-radius: 10px;
+        cursor: pointer;
+        border: 1px solid $borderColor;
+        width: 100%;
+    }
+}
+
+.postContainer{
+    width: 100%;
+    position: relative;
+
+    .post{
+        width: 100%;
+        background-color: white;
+        padding: 10px;
+        border-radius: 10px;
+        border: 1px solid $borderColor;
+        cursor: pointer;
+        display: flex;
+        gap: 10px;
+        margin-top: 10px;
+        position: relative;
+    }
+
+    .postImage{
+        width: 100px;
+        height: 100px;
+        position: relative;
+        border-radius: 50%;
+    }
+
+    .postImage img{
+        width: 100%;
+        border-radius: 50%;
+    }
+
+    .statusBox{
+        background-color: $pageWrapper;
+        padding: 10px;
+        border-radius: 10px;
+        cursor: pointer;
+        border: 1px solid $borderColor;
+        position: relative;
+
+        .reactions{
+            width: 100%;
+            height: 50px;
+            border: 1px solid $borderColor;
+            padding: 10px 20px;
+            margin-top: 5px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            border-radius: 10px;
+
+            .reaction{
+                margin-top: 10px;
+            }
+
+             p:hover{
+                color: $primaryColor
+            }
+        }
+
+        .postAttachment{
+            width: 100%;           
+            position: relative;
+        }
+
+        .postAttachment img{
+            width: 100%;
+            height: 50%;
+        }
+    }
+
+    .loadMoreBtn{
+        width: 100%;
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.modalOverlay{
+    width: 100%;
+    height: 100vh;
+    position: fixed;   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+}
+
+.pageOverlay{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    z-index: 4; 
+    background-color: rgba(126, 126, 126, 0.517);
+    opacity: .4;
+    visibility: hidden;
+    transition: all .38s ease-in-out;
+    
+}
+
+.displayPageOverlay{
+    visibility: visible;
+    opacity: 1;        
+}
+
+.statusModal{
+    width: 500px;
+    height: 500px;
+    position: relative;
+    background-color: white;
+    border-radius: 10px;
+    z-index: 6;
+    border: 1px solid $borderColor;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+.statusModal .header{
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    background-color: white;
+}
+
+
+.titleClose{
+    width: 65%;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.titleClose .close .icon{
+    font-size: 30px;
+    color: var(--redColor);
+    cursor: pointer;
+    font-weight: bold;
+}

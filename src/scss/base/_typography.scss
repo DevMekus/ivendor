@@ -1,0 +1,102 @@
+/* Basic Settings */
+
+@font-face {
+    font-family: 'CustomFontRegular';
+    src: url('../fonts/SegoeUIHistoric.ttf') format('ttf'),
+         url('../fonts/SegoeUIHistoric.ttf') format('ttf');
+}
+
+@font-face {
+    font-family: 'CustomFontBold';
+    src: url('../fonts/SegoeUISemibold.ttf') format('ttf'),
+         url('../fonts/SegoeUISemibold.ttf') format('ttf');
+}
+
+@font-face {
+    font-family: 'CustomFontLight';
+    src: url('../fonts/SegoeUISemilight.ttf') format('ttf'),
+         url('../fonts/SegoeUISemilight.ttf') format('ttf');
+}
+
+$primaryColor : rgb(37, 37, 220);
+$secondaryColor : #56687A;
+$warningColor : #CC3300;
+$pageWrapper:rgb(240, 242, 245);
+$danger : rgb(254,0,0);
+$fontColor : #050505;
+$borderColor: rgb(229, 229, 229);
+
+
+$CustomFontRegular: 'CustomFontRegular', sans-serif;  
+$CustomFontBold: 'CustomFontBold', sans-serif;  
+$CustomFontLight: 'CustomFontLight', sans-serif; 
+
+
+/** Headings **/
+h1,
+h2,
+h3,
+h4,
+h5{
+    font-family: var(--CustomFontBold); 
+    font-weight: 400;  
+    line-height: 28px; 
+    text-transform: capitalize;   
+}
+
+.title{
+    font-size: 17px;
+    font-weight: 500;
+    font-style: normal;
+    line-height: 20px;
+  
+}
+
+
+/** Paragraph **/
+p{
+    font-family: var(--CustomFontRegular); 
+    font-weight: 400;   
+    line-height: 20px;  
+    font-size: 15px;  
+    color: var(--paragraphColor);  
+}
+
+a{
+    font-family: var(--CustomFontRegular); 
+    font-weight: 400;
+    text-decoration: none;
+    line-height: 20px;  
+    font-size: 15px; 
+   
+}
+
+.smallFont{
+    font-family: var(--CustomFontRegular); 
+    font-weight: 400;   
+    line-height: 20px;  
+    font-size: 14px;  
+    color: var(--paragraphColor);  
+}
+
+.boldFont{
+    font-family: var(--CustomFontBold); 
+    font-weight: 600;   
+    line-height: 20px;  
+    font-size: 15px;  
+    /* color: var(--paragraphColor);   */
+}
+
+.bold{
+    font-weight: bold;
+}
+
+/** ScrollBars **/
+.scrollable{
+    overflow: scroll;
+    width: 100%;
+}
+
+.scrollable::-webkit-scrollbar {
+    display: none;
+}

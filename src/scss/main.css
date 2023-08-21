@@ -1,0 +1,438 @@
+/* Basic Settings */
+@font-face {
+  font-family: "CustomFontRegular";
+  src: url("../fonts/SegoeUIHistoric.ttf") format("ttf"), url("../fonts/SegoeUIHistoric.ttf") format("ttf");
+}
+@font-face {
+  font-family: "CustomFontBold";
+  src: url("../fonts/SegoeUISemibold.ttf") format("ttf"), url("../fonts/SegoeUISemibold.ttf") format("ttf");
+}
+@font-face {
+  font-family: "CustomFontLight";
+  src: url("../fonts/SegoeUISemilight.ttf") format("ttf"), url("../fonts/SegoeUISemilight.ttf") format("ttf");
+}
+/** Headings **/
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: var(--CustomFontBold);
+  font-weight: 400;
+  line-height: 28px;
+  text-transform: capitalize;
+}
+
+.title {
+  font-size: 17px;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 20px;
+}
+
+/** Paragraph **/
+p {
+  font-family: var(--CustomFontRegular);
+  font-weight: 400;
+  line-height: 20px;
+  font-size: 15px;
+  color: var(--paragraphColor);
+}
+
+a {
+  font-family: var(--CustomFontRegular);
+  font-weight: 400;
+  text-decoration: none;
+  line-height: 20px;
+  font-size: 15px;
+}
+
+.smallFont {
+  font-family: var(--CustomFontRegular);
+  font-weight: 400;
+  line-height: 20px;
+  font-size: 14px;
+  color: var(--paragraphColor);
+}
+
+.boldFont {
+  font-family: var(--CustomFontBold);
+  font-weight: 600;
+  line-height: 20px;
+  font-size: 15px;
+  /* color: var(--paragraphColor);   */
+}
+
+.bold {
+  font-weight: bold;
+}
+
+/** ScrollBars **/
+.scrollable {
+  overflow: scroll;
+  width: 100%;
+}
+
+.scrollable::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.appContainer {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-color: rgb(240, 242, 245);
+  position: relative;
+}
+
+.flexedContainer {
+  width: 95%;
+  margin: auto;
+  height: 100%;
+  display: flex;
+  gap: 10px;
+  position: relative;
+}
+
+.flexSection {
+  position: relative;
+}
+
+.flexedContainer .flexSection {
+  flex: 1;
+  height: 100vh;
+}
+
+.flexedContainer .centerContentSide {
+  flex: 2;
+}
+
+.fixedTopNavigation {
+  width: 100%;
+  position: sticky;
+  top: 0px;
+  left: 0px;
+  background-color: white;
+  box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.1);
+  z-index: 3;
+}
+
+.navbarContainer {
+  width: 100%;
+  padding: 10px 20px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbarContainer .navSide {
+  flex: 1;
+  display: flex;
+  gap: 15px;
+}
+
+.pushEnd {
+  justify-content: flex-end;
+}
+
+.navIcon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+}
+.navIcon:hover {
+  cursor: pointer;
+  color: var(--primaryColor);
+}
+.navIcon a {
+  text-decoration: none;
+}
+
+.searchBox {
+  width: 400px;
+  height: 300px;
+  position: absolute;
+  background-color: white;
+  box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.1);
+  top: 60px;
+  left: 0px;
+  border: 1px solid rgb(37, 37, 220);
+  padding: 10px;
+  visibility: hidden;
+  opacity: 0.8;
+  transition: all 0.38s ease-in-out;
+}
+.searchBox .header {
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+}
+.searchBox .header .fa:hover {
+  cursor: pointer;
+}
+.searchBox .form {
+  margin-top: 10px;
+}
+.searchBox .searchInput {
+  width: 100%;
+  padding: 5px;
+  border-radius: 10px;
+  outline: none;
+  border: 1px solid rgb(37, 37, 220);
+}
+.searchBox .searchResult {
+  margin-top: 20px;
+}
+
+.showSearchBox {
+  visibility: visible;
+  opacity: 1;
+}
+
+.leftSideContents {
+  width: 100%;
+  position: relative;
+  height: 100vh;
+}
+
+.flexContainer {
+  width: 100%;
+  position: relative;
+  display: flex;
+  gap: 10px;
+}
+
+.brandArea {
+  width: 100%;
+  position: relative;
+  background-color: white;
+  padding: 10px;
+}
+
+.brandLogo {
+  width: 70px;
+  height: 70px;
+  position: relative;
+  background-color: white;
+  border-radius: 50%;
+  /* padding: 4px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.brandLogo img {
+  width: 90%;
+  border-radius: 50%;
+}
+
+.brandTools {
+  width: 100%;
+  position: relative;
+  background-color: white;
+  padding: 20px;
+  margin-top: 10px;
+}
+
+.flexItem {
+  width: 100%;
+  position: relative;
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.flexItem a {
+  font-size: 16px;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: justify;
+}
+.flexItem:hover {
+  color: rgb(37, 37, 220);
+}
+
+.advertcarousel {
+  width: 100%;
+  height: 250px;
+}
+
+.loginInfo {
+  font-size: 14px;
+}
+
+.redIcon {
+  color: rgb(254, 0, 0);
+}
+
+.settingsIcon {
+  color: black;
+}
+
+.badgeFlex {
+  width: 200px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.badgeFlex .badge {
+  cursor: pointer;
+}
+
+.statusPostCon {
+  border-radius: 10px;
+  position: relative;
+  padding: 20px;
+  width: 100%;
+  position: relative;
+}
+
+.postArea {
+  align-items: center;
+}
+.postArea .statusBox {
+  background-color: rgb(240, 242, 245);
+  padding: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  border: 1px solid rgb(229, 229, 229);
+  width: 100%;
+}
+
+.postContainer {
+  width: 100%;
+  position: relative;
+}
+.postContainer .post {
+  width: 100%;
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid rgb(229, 229, 229);
+  cursor: pointer;
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  position: relative;
+}
+.postContainer .postImage {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  border-radius: 50%;
+}
+.postContainer .postImage img {
+  width: 100%;
+  border-radius: 50%;
+}
+.postContainer .statusBox {
+  background-color: rgb(240, 242, 245);
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  border: 1px solid rgb(229, 229, 229);
+  position: relative;
+}
+.postContainer .statusBox .reactions {
+  width: 100%;
+  height: 50px;
+  border: 1px solid rgb(229, 229, 229);
+  padding: 10px 20px;
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  border-radius: 10px;
+}
+.postContainer .statusBox .reactions .reaction {
+  margin-top: 10px;
+}
+.postContainer .statusBox .reactions p:hover {
+  color: rgb(37, 37, 220);
+}
+.postContainer .statusBox .postAttachment {
+  width: 100%;
+  position: relative;
+}
+.postContainer .statusBox .postAttachment img {
+  width: 100%;
+  height: 50%;
+}
+.postContainer .loadMoreBtn {
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modalOverlay {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 5;
+}
+
+.pageOverlay {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  z-index: 4;
+  background-color: rgba(126, 126, 126, 0.517);
+  opacity: 0.4;
+  visibility: hidden;
+  transition: all 0.38s ease-in-out;
+}
+
+.displayPageOverlay {
+  visibility: visible;
+  opacity: 1;
+}
+
+.statusModal {
+  width: 500px;
+  height: 500px;
+  position: relative;
+  background-color: white;
+  border-radius: 10px;
+  z-index: 6;
+  border: 1px solid rgb(229, 229, 229);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.statusModal .header {
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  background-color: white;
+}
+
+.titleClose {
+  width: 65%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.titleClose .close .icon {
+  font-size: 30px;
+  color: var(--redColor);
+  cursor: pointer;
+  font-weight: bold;
+}/*# sourceMappingURL=main.css.map */
