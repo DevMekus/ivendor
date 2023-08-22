@@ -15,7 +15,7 @@ const Navbarseller = () => {
       <nav className="navbarContainer">
         <div className="navSide">
           <div className="navIcon  activeLink navlink " id="index">         
-            <h4 className="bold">Ivendor</h4>
+            <h4 className="bold brandName">Ivendor</h4>
           </div>
           <div className="navIcon  activeLink navlink " id="index"  onClick={showsearch}>
             <span className="material-symbols-outlined">search</span>

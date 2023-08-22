@@ -14,9 +14,15 @@ import React from 'react'
                     <img src="https://w7.pngwing.com/pngs/361/627/png-transparent-leaf-logo-green-leaves-green-and-teal-leaf-logo-text-maple-leaf-grass.png" />
                 </div>
                 <div className='reactions'>
-                    <div className='reaction'><p><i class="fa fa-heart" aria-hidden="true"></i> Like</p> </div>
-                    <div className='reaction'><p><i class="fa fa-comment" aria-hidden="true"></i> Comment</p> </div>
-                    <div className='reaction'><p><i class="fa fa-bookmark" aria-hidden="true"></i> Bookmark</p> </div>                   
+                    <div className='reactionbtn'>
+                        <div className='reaction'><p><i class="fa fa-heart" aria-hidden="true"></i> Like</p> </div>
+                        <div className='reaction'><p><i class="fa fa-comment" aria-hidden="true"></i> Comment</p> </div>
+                        <div className='reaction'><p><i class="fa fa-bookmark" aria-hidden="true"></i> Bookmark</p> </div>  
+                    </div>   
+                    <div className='counts'>
+                        <p>30 Comments</p>
+                        <p>8 Bookmarks</p>
+                    </div>              
                 </div>
             </div>
         </div>
