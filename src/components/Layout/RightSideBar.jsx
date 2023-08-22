@@ -1,20 +1,25 @@
 import React from 'react'
-import "../scss/components/sidebars.css"
+import "../../scss/components/sidebars.css"
 
-const RightSideBar = () => {
+const RightSideBar = (props) => {
   return (
     <div className='rightSideContents'>
-           <div className="flexContainer brandArea">
-            <div className="brandLogo">
-                <img src="https://imgv3.fotor.com/images/gallery/Realistic-Male-Profile-Picture.jpg" />
-            </div>
-                <div>
-                    <a href="">
-                        <h5 className="card-title">Emmanuel Nnaemeka <span className='settingsIcon'><i className="fa fa-cog" aria-hidden="true"></i></span></h5>
-                        <p className="loginInfo">(DevMekus) <span className="redIcon"><i className="fa fa-clock" aria-hidden="true"></i> Logged in: 30min. ago</span></p>                                          
-                    </a>
-                </div>
-            </div>
+            <div className='headSection'>
+                <div className="menuHideDesk closeLeftMenu closeMenu pull-start" onClick={props.closeRightBar}>         
+                        <span className="material-symbols-outlined">close</span>
+                    </div>
+                <div className="flexContainer brandArea">
+                    <div className="brandLogo">
+                        <img src="https://imgv3.fotor.com/images/gallery/Realistic-Male-Profile-Picture.jpg" />
+                    </div>
+                        <div>
+                            <a href="">
+                                <h5 className="card-title">Emmanuel Nnaemeka </h5>
+                                <p className="loginInfo">(DevMekus) <span className="redIcon"><i className="fa fa-clock" aria-hidden="true"></i> Logged in: 30min. ago</span></p>                                          
+                            </a>
+                        </div>
+                    </div>
+           </div>
 
             <div className='brandTools'>
                 <div className="flexItem">

@@ -1,14 +1,19 @@
 import React from 'react'
+import { useState } from 'react';
 
 
-const StatusModal = () => {
+
+const StatusModal = (props) => {    
+
   return (    
+
         <div className="modalOverlay">
             <div className='statusModal'>
                 <div className="header">                       
                     <div className="titleClose">
                         <h4 className="bold">Create post</h4>
-                        <div className="close"><span className="material-symbols-outlined icon">
+                        <div className="close"><span className="material-symbols-outlined icon" 
+                            onClick={props.closeModal}>
                         close
                         </span></div>
                     </div>
@@ -25,25 +30,28 @@ const StatusModal = () => {
                         </div>
                     </div>                   
                 </div> 
-                <div className="attachmentArea">
-                    <div><p className="bold">Add to this post</p></div>
-                    <div className="postAttachment">
-                        <span className="material-symbols-outlined attachment" id="attachImage">
-                        image
-                        </span>
-                        <span className="material-symbols-outlined attachment" id="attachVideo">
-                        play_circle
-                        </span>
-                        <span className="material-symbols-outlined attachment" id="attachCustomer">
-                        person
-                        </span>
-                        <span className="material-symbols-outlined attachment" id="attachLocation">
-                        home_pin
-                        </span>
-                        <span className="material-symbols-outlined attachment" id="attachMusic">
-                        music_note
-                        </span>
-                    </div>
+                <div>
+                    <div className='attachementForm'></div>
+                        <div className="attachmentArea">                 
+                                <div><p className="bold">Add to this post</p></div>
+                                <div className="postAttachment">
+                                    <span className="material-symbols-outlined attachment" id="attachImage">
+                                    image
+                                    </span>
+                                    <span className="material-symbols-outlined attachment" id="attachVideo">
+                                    play_circle
+                                    </span>
+                                    <span className="material-symbols-outlined attachment" id="attachCustomer">
+                                    person
+                                    </span>
+                                    <span className="material-symbols-outlined attachment" id="attachLocation">
+                                    home_pin
+                                    </span>
+                                    <span className="material-symbols-outlined attachment" id="attachMusic">
+                                    music_note
+                                    </span>
+                                </div>
+                        </div>
                 </div>
 
                 <div className="BoostArea">

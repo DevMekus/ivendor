@@ -1,26 +1,23 @@
 import React from "react";
+import { Outlet, Link } from "react-router-dom";
 
-const Navbarseller = () => {
+const Navbarseller = (props) => {
   
-  function showsearch(){
-    const searchBox = document.querySelector(".searchBox").classNameList.toggle("showSearchBox")   
-  }
-
-  function closeSearchBox(){
-    const searchBox = document.querySelector(".searchBox").classNameList.remove("showSearchBox")   
-  }
-
   return (
-    <div className="fixedTopNavigation">
+      <>
+      <div className="fixedTopNavigation">
       <nav className="navbarContainer">
         <div className="navSide">
+          <div className="navIcon  activeLink navlink menuHideDesk" id="index" onClick={props.openLeftBar}>         
+            <span className="material-symbols-outlined">menu</span>
+          </div>
           <div className="navIcon  activeLink navlink " id="index">         
             <h4 className="bold brandName">Ivendor</h4>
           </div>
-          <div className="navIcon  activeLink navlink " id="index"  onClick={showsearch}>
+          <div className="navIcon  activeLink navlink " id="index">
             <span className="material-symbols-outlined">search</span>
             <div className="searchBox">
-                <div className="header"><div onClick={closeSearchBox}><i className="fa fa-times" ></i></div></div>
+                <div className="header"><div><i className="fa fa-times" ></i></div></div>
                 <div className="form"><input type="search" className="searchInput" placeholder="Search" /></div>
                 <div className="searchResult">
                   <p>Searching result...</p>
@@ -31,8 +28,8 @@ const Navbarseller = () => {
         <div className="navSide">
           <div className="navIcon  activeLink navlink " id="index">
             <span className="material-symbols-outlined">home</span>
-            <a href="<?php echo $site; ?>sellercenter/modules/home/index.php">
-              Home
+            <a href="#">
+              <Link to="/">Home</Link>
             </a>
           </div>
 
@@ -40,39 +37,44 @@ const Navbarseller = () => {
             <span className="material-symbols-outlined">
               local_convenience_store
             </span>
-            <a href="<?php echo $site; ?>sellercenter/modules/inventory/inventoryManager.php">
-              Market
+            <a href="#">
+            <Link to="inventory">Inventory</Link>
             </a>
           </div>
           <div className="navIcon navlink" id="vendor">
             <span className="material-symbols-outlined">forum</span>
-            <a href="<?php echo $site; ?>sellercenter/modules/inventory/inventoryManager.php">
-              Negotiate
+            <a href="#">
+              <Link to="market">Market</Link>
             </a>
           </div>
         </div>
         <div className="navSide pushEnd">
           <div className="navIcon  activeLink navlink " id="index">
             <span className="material-symbols-outlined">notifications</span>
-            <a href="<?php echo $site; ?>sellercenter/modules/home/index.php">
+            <a href="#">
               notification
             </a>
           </div>
           <div className="navIcon navlink" id="vendor">
             <span className="material-symbols-outlined">support_agent</span>
-            <a href="<?php echo $site; ?>sellercenter/modules/inventory/inventoryManager.php">
+            <a href="#">
               Support
             </a>
           </div>
-          <div className="navIcon navlink" id="vendor">
+          <div className="navIcon navlink menuHideDesk" id="vendor" onClick={props.openRightBar}>
             <span className="material-symbols-outlined">account_circle</span>
-            <a href="<?php echo $site; ?>sellercenter/modules/inventory/inventoryManager.php">
+            <a href="#">
               Account
             </a>
           </div>
         </div>
+     
       </nav>
+    
     </div>
+    <Outlet />
+      </>
+     
   );
 };
 

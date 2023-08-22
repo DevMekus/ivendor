@@ -25,15 +25,124 @@
 }
 
 .flexSection{
-    position: relative;
+    position: relative;  
 }
 
 .flexedContainer .flexSection{
     flex: 1;
     height: 100vh;
+    transition: all .38s ease-in-out;
   
 }
 
 .flexedContainer .centerContentSide{
     flex: 2;
+}
+
+.menuHideDesk{
+    visibility: hidden;
+}
+.headSection{
+    background-color: white;
+
+    .closeMenu{
+        padding: 10px;
+       
+
+        .pull-start{
+            display: flex;
+            justify-content: flex-start;
+        }
+
+        .pull-end{
+            display: flex;
+            justify-content: flex-end;
+        }
+    }
+
+    .closeMenu span{
+        color: $danger;
+        font-size: 30px;
+    }
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (max-width: 762px) {
+    .flexedContainer{
+        width: 100%;
+        margin: auto;
+        height: 100%;
+        display: flex;
+        gap: 10px;
+        position: relative;
+    }
+
+    .leftBrandSide{
+       position: fixed;
+       left: -100px;
+       top: 0px;
+       z-index: 4;
+       width: 300px;
+       box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.1);
+       transition: all .38s ease-in-out;
+       opacity: .6;
+       visibility: hidden;
+       display: none;
+
+       .closeMenu{
+        opacity: .6;
+        visibility: hidden;
+       }
+    }
+
+    .showsideBar{
+        display: block;
+        visibility: visible;
+        left: 0px;
+        opacity: 1;
+        .closeMenu{
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+
+    .rightProfileSide{
+        position: fixed;
+        right: -100px;
+        top: 0px;
+        z-index: 4;
+        width: 300px;
+        height: 100vh;
+        box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.1);
+        transition: all .38s ease-in-out;
+        opacity: .6;
+        visibility: hidden;
+        display: none;
+        .closeMenu{
+            opacity: .6;
+            visibility: hidden;
+        }
+ 
+    }
+
+    .showRightsideBar{
+        display: block;
+        visibility: visible;
+        right: 0px;
+        opacity: 1;
+
+        .closeMenu{
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+
+    .menuHideDesk{
+        visibility: visible;
+    }
+
+    .centerContentSide{
+        width: 100%;
+        position: relative;
+    }
 }
