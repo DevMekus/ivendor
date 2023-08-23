@@ -1,0 +1,27 @@
+.pageHeader{
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    background-color: white;
+   
+
+    .customForm{
+        width: 220px;
+    }
+}
+
+.pageTitle{
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.pageDesc{
+    font-size: 14px;    
+}
+
+
+.sectionSpace{
+    margin-top: 10px;
+}

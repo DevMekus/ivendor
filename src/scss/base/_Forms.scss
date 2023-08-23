@@ -1,0 +1,77 @@
+.customForm{
+    padding: 5px 10px;
+    outline: none;
+    border-radius: 10px;
+    min-width: 150px;   
+}
+
+.formBorder{
+    border: 2px solid $borderColor; 
+}
+
+label{
+    font-size: 14px;
+    color: $secondaryColor;
+}
+
+
+/** Form Controls **/
+.customTextInput , .customInput{
+    padding: 5px 20px;
+    border-radius: 5px;   
+    outline: none;
+    border: none;
+    background-color:  $formControls;
+    transition: all .38s ease-in-out;
+    width: 100%;  
+}
+
+.customTextbox{
+    padding: 5px 20px;
+    border-radius: 5px; 
+    width: 100%;  
+    outline: none;
+    border: none;
+    background-color: $formControls;
+    transition: all .38s ease-in-out;
+}
+
+.customFormSelect{
+    padding: 5px 10px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    background-color:  $formControls;
+    transition: all .38s ease-in-out;
+    width: 100%;  
+}
+
+.formPadding{
+    padding: 20px;
+}
+
+.formSection{
+    font-size: 14px;
+    color: $primaryColor;
+}
+
+.tagContainer{
+    width: 300px;
+    position: relative;
+    padding: 20px;
+
+    .divider{
+        width: 50%;
+        height: 2px;
+        background-color: $borderColor;
+        margin-top: 10px;
+    }
+
+    .tagItem{
+        width: 100%;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+

@@ -1,6 +1,12 @@
 
+@import "./base/Brand";
+@import "./base/typography";
+@import "./base/Sizes";
+@import "./base/Forms";
+@import "./base/Buttons";
 @import "./layout/pageLayout";
 @import "./components/navbar";
 @import "./components/sidebars";
 @import "./components/statusPost";
+@import "./components/PageHeader";
 

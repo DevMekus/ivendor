@@ -18,8 +18,8 @@ const LeftSideBar=(props)=> {
                     </div>
                     <div>
                         <a href="">
-                            <h4 className="title boldFont brandTitle brandColor">Najiserve Technology</h4>
-                            <p className="loggedIn"> Brand Tagline</p>
+                            <h4 className="title boldFont brandTitle brandColor">Forever Products</h4>
+                            <p className="loggedIn"> Natural remedy for your health.</p>
                         </a>
                     </div>
                     

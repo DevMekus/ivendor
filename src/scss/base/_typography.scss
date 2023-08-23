@@ -18,14 +18,6 @@
          url('../fonts/SegoeUISemilight.ttf') format('ttf');
 }
 
-$primaryColor : rgb(37, 37, 220);
-$secondaryColor : #56687A;
-$warningColor : #CC3300;
-$pageWrapper:rgb(240, 242, 245);
-$danger : rgb(254,0,0);
-$fontColor : #050505;
-$borderColor: rgb(229, 229, 229);
-
 
 $CustomFontRegular: 'CustomFontRegular', sans-serif;  
 $CustomFontBold: 'CustomFontBold', sans-serif;  
@@ -38,7 +30,7 @@ h2,
 h3,
 h4,
 h5{
-    font-family: var(--CustomFontBold); 
+    font-family: $CustomFontBold; 
     font-weight: 400;  
     line-height: 28px; 
     text-transform: capitalize;   
@@ -55,7 +47,7 @@ h5{
 
 /** Paragraph **/
 p{
-    font-family: var(--CustomFontRegular); 
+    font-family: $CustomFontRegular; 
     font-weight: 400;   
     line-height: 20px;  
     font-size: 15px;  
@@ -63,7 +55,7 @@ p{
 }
 
 a{
-    font-family: var(--CustomFontRegular); 
+    font-family: $CustomFontRegular; 
     font-weight: 400;
     text-decoration: none;
     line-height: 20px;  
@@ -72,7 +64,7 @@ a{
 }
 
 .smallFont{
-    font-family: var(--CustomFontRegular); 
+    font-family: $CustomFontRegular; 
     font-weight: 400;   
     line-height: 20px;  
     font-size: 14px;  
@@ -80,11 +72,19 @@ a{
 }
 
 .boldFont{
-    font-family: var(--CustomFontBold); 
+    font-family: $CustomFontBold; 
     font-weight: 600;   
     line-height: 20px;  
     font-size: 15px;  
     /* color: var(--paragraphColor);   */
+}
+
+.subtitleColor{
+    color: $secondaryColor;
+}
+
+.pageDesc{
+    color: $secondaryColor;  
 }
 
 .bold{
@@ -100,3 +100,14 @@ a{
 .scrollable::-webkit-scrollbar {
     display: none;
 }
+
+.brandColor{
+    color: $primaryColor;
+}
+
+.space_between{
+    display: flex;
+    justify-content: space-between;
+}
+
+

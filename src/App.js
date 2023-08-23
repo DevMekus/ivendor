@@ -6,11 +6,13 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home/Home.jsx";
 import Inventory from "./pages/Inventory/Inventory.jsx";
 import Market from "./pages/Market/Market.jsx";
+import NewProduct from "./pages/Inventory/NewProduct.jsx";
 
 /**Importing App Layout Component */
 import LeftSideBar from "./components/Layout/LeftSideBar.jsx";
 import RightSideBar from "./components/Layout/RightSideBar.jsx";
 import Navbarseller from "./components/Layout/Navbarseller.jsx";
+import SetTag from "./pages/Inventory/SetTag.jsx";
 
 import "./scss/main.css";
 
@@ -52,6 +54,10 @@ function App() {
               >
                 <Route path="/" element={<Home />} />
                 <Route path="inventory" element={<Inventory />} />
+                <Route path="inventory">
+                  <Route path="newP" element={<NewProduct />} />
+                  <Route path="tag" element={<SetTag />} />
+                </Route>
                 <Route path="market" element={<Market />} />
               </Route>
             </Routes>
