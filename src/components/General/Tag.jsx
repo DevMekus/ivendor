@@ -1,7 +1,6 @@
 import React from 'react'
 
-const Tag = ({ items }) => {
-    console.log(items)
+const Tag = ({ items }) => {    
   return (
   
     <>
